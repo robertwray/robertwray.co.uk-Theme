@@ -1,8 +1,8 @@
-Name: robertwray.co.uk
-Author: The Orchard Team
-Website: http://www.orchardproject.net
-Description: Description for the theme
-Version: 1.0
+Name: robertwray.co.uk Theme
+Author: Robert Wray
+Website: http://robertwray.co.uk/
+Description: Theme for robertwray.co.uk, basically PJS.Bootstrap with some bespokings
+Version: 1.0.0
 BaseTheme: PJS.Bootstrap
 # todo: provide tags
 # Tags: Classic, Serif
