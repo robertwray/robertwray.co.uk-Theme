@@ -1,0 +1,31 @@
+﻿@using Orchard.Tags.ViewModels;
+
+@{
+    Layout.Title = Model.ContentItem.TitlePart.Title;
+
+    var blogPost = Model.ContentItem;
+}
+
+<article id="post-@blogPost.Id">
+    <h1>@blogPost.TitlePart.Title</h1>
+    <div class="metadata" style="margin-bottom: 10px;">
+        <time class="clearfix" datetime="@blogPost.CommonPart.CreatedUtc.ToLocalTime().ToString("yyyy-MM-dd")">@blogPost.CommonPart.CreatedUtc.ToLocalTime().ToString("dddd, MMMM d, yyyy")</time>
+        @if (Model.Tags.Items.Count > 0 && ((IEnumerable<ShowTagViewModel>)Model.Tags.Items[0].Tags).Any()) {
+            @Display(Model.Tags)
+        }
+    </div>
+    @Display(Model.Summary)
+</article>
+@if (blogPost.BlogPostPart.BlogPart.Name == "blog")
+{
+<section id="aboutTheAuthor" style="background-color: rgb(229, 241, 253); padding-left: 10px; padding-right: 10px; padding-top: 5px;">
+    <h3>About Rob</h3>
+    <div style="background: transparent url('/Media/Default/AboutMe/bio_banner_image.png') no-repeat right top; padding-right: 125px; min-height: 125px; font-size: smaller;">
+        I've been interested in computing since the day my Dad purchased his first business PC (an Amstrad PC 1640 for anyone interested) which introduced me to MS-DOS batch programming and BASIC.
+        <br /><br />
+        My skillset has matured somewhat since then, which you'll probably see from the posts here. You can read a bit more about me on the <a href="/about">about</a> page of the site, or check out some of the other posts on my areas of interest.
+    </div>
+</section>
+}
+<hr />
+@Display(Model.Footer)

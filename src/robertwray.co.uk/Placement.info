@@ -1,6 +1,24 @@
 <Placement>
   <!-- Customize where the shapes are rendered -->
 
+  <Match ContentType="BlogPost">
+    <Match DisplayType="Summary">
+      <Place Parts_Common_Body_Summary="Summary:0"
+             Parts_Tags_ShowTags="Tags:0"
+             Parts_Comments_Count="CommentsCount:0"
+             Parts_Common_Metadata_Summary="-" />
+    </Match>
+    <Match DisplayType="Detail">
+      <Place Parts_Common_Body="Summary:0"
+             Parts_Tags_ShowTags="Tags:0"
+             Parts_Comments_Count="CommentsCount:0"
+             Parts_AboutTheAuthor="Footer:0"
+             Parts_ListOfComments="Footer:1"
+             Parts_CommentForm="Footer:2"
+             Parts_Common_Metadata="-" />
+    </Match>
+  </Match>
+
   <!-- 
   <Place Parts_Blogs_BlogArchives="Content:before"/>
   <Place Parts_Blogs_RecentBlogPosts="Content:after"/>
