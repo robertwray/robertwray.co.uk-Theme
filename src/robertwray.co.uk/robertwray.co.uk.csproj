@@ -91,6 +91,7 @@
   <ItemGroup>
     <Content Include="Assets.json" />
     <Content Include="Assets\Styles.less" />
+    <Content Include="Styles\robertwray.co.uk.customisations.css" />
     <Content Include="Styles\Styles.css" />
     <Content Include="Styles\Styles.min.css" />
     <Content Include="Web.config" />
@@ -116,6 +117,17 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Views\BadgeOfHonor.cshtml" />
+    <Content Include="Views\Content-BlogPost.cshtml" />
+    <Content Include="Views\Document.cshtml" />
+    <Content Include="Views\Parts.AboutTheAuthor.cshtml" />
+    <Content Include="Views\Parts.Blogs.BlogArchives.cshtml" />
+    <Content Include="Views\Parts.Blogs.BlogPost.List.cshtml" />
+    <Content Include="Views\Parts.Blogs.RecentBlogPosts.cshtml" />
+    <Content Include="Views\Parts.Title-9.cshtml" />
+    <Content Include="Views\Resources.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Home\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

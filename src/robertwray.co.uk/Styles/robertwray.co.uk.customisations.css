@@ -1,0 +1,97 @@
+/*
+article > ol 
+{
+    list-style: decimal;
+    padding-left: 30px;
+}
+
+article > ol ol
+{
+    list-style: lower-alpha;
+    padding-left: 30px;
+}
+
+article > ol li, ol ol li
+{
+    padding-left: 10px;   
+}
+
+article div > ol 
+{
+    list-style: decimal;
+    padding-left: 30px;
+}
+
+article div > ol ol
+{
+    list-style: lower-alpha;
+    padding-left: 30px;
+}
+
+article div > ol li, ol ol li
+{
+    padding-left: 10px;   
+}
+
+article > ul
+{
+    list-style: disc;
+    padding-left: 30px;
+}
+*/
+
+#blogrecipe h2
+{
+font-size: medium;
+font-weight: bold;
+}
+
+#blogrecipe #overview
+{
+overflow: hidden;
+}
+
+#blogrecipe #overview > h1
+{
+display: none;
+}
+
+#blogrecipe #overview, #statistics, #ingredients, #method
+{
+clear: both;
+}
+
+#blogrecipe > #ingredients > ul
+{
+list-style-type: none;
+}
+
+#blogrecipe #method > ol
+{
+list-style-type: decimal;
+}
+
+div[itemprop="author"]
+{
+display: none;
+}
+
+div[itemprop="image"]
+{
+float: left;
+}
+
+
+ul.tag-cloud { list-style: none; }
+li.tag-cloud-tag { display: inline; }
+.tag-cloud-tag a { border: none; }
+.tag-cloud-tag-1 { font-size: 1em; }
+.tag-cloud-tag-2 { font-size: 1.3em; }
+.tag-cloud-tag-3 { font-size: 1.5em; }
+.tag-cloud-tag-4 { font-size: 1.7em; }
+.tag-cloud-tag-5 { font-size: 1.9em; }
+/*.tag-cloud-tag-6 { font-size: 1.5em; }
+.tag-cloud-tag-7 { font-size: 1.7em; }
+.tag-cloud-tag-8 { font-size: 1.7em; }
+.tag-cloud-tag-9 { font-size: 1.8em; }
+.tag-cloud-tag-10 { font-size: 1.9em; }*/
