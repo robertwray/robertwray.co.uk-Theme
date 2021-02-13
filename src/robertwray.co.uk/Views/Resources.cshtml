@@ -12,10 +12,12 @@
     RegisterLink(new LinkEntry { Rel = "apple-touch-icon", Href = Url.Content(theme.Location + "/" + theme.Path + "/Content/" + "apple-touch-icon.png") });
 
     SetMeta(new MetaEntry { Name = "viewport", Content = "width=device-width, initial-scale=1.0" });
-    SetMeta(httpEquiv: "X-UA-Compatible", content: "IE=edge,chrome=1");
+    SetMeta(new MetaEntry { Name = "msapplication-TileColor", Content = "#ffffff" });
+    SetMeta(new MetaEntry { Name = "msapplication-TileImage", Content = Url.Content(theme.Location + "/" + theme.Path + "/Content/" + "ms-icon-144x144.png") });
 
     Style.Include("site-" + settings.Swatch + ".min.css");
-    if (cultureInfo.TextInfo.IsRightToLeft) {
+    if (cultureInfo.TextInfo.IsRightToLeft)
+    {
         Style.Include("site-rtl.min.css");
     }
 
@@ -25,9 +27,10 @@
     Script.Include("~/Core/Shapes/Scripts/html5.js").UseCondition("lt IE 9").AtHead();
     Script.Require("Bootstrap");
 
-    if (settings.UseHoverMenus) {
+    if (settings.UseHoverMenus)
+    {
         Script.Require("HoverDropdown");
     }
-    
+
     Script.Require("Custom");
 }
