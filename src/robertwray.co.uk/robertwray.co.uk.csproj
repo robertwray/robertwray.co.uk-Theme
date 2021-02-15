@@ -10,7 +10,7 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>robertwray.co.uk</RootNamespace>
+    <RootNamespace>robertwraycouk</RootNamespace>
     <AssemblyName>robertwray.co.uk</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
@@ -117,6 +117,7 @@
     <Content Include="Content\ms-icon-150x150.png" />
     <Content Include="Content\ms-icon-310x310.png" />
     <Content Include="Content\ms-icon-70x70.png" />
+    <Content Include="Scripts\carousel-helper.js" />
     <Content Include="Styles\robertwray.co.uk.customisations.css" />
     <Content Include="Styles\Styles.css" />
     <Content Include="Styles\Styles.min.css" />
@@ -155,6 +156,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
