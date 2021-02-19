@@ -153,6 +153,13 @@
     <Content Include="Views\Parts.Blogs.RecentBlogPosts.cshtml" />
     <Content Include="Views\Parts.Title-9.cshtml" />
     <Content Include="Views\Resources.cshtml" />
+    <Content Include="Views\Layout.cshtml" />
+    <Content Include="Views\Branding.cshtml" />
+    <Content Include="Views\NavSearch.cshtml" />
+    <Content Include="Views\Menu.cshtml" />
+    <Content Include="Views\MenuItem.cshtml" />
+    <Content Include="Views\MenuItemLinkdd.cshtml" />
+    <Content Include="Views\MenuItemLink.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Home\" />

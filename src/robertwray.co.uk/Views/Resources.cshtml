@@ -9,7 +9,6 @@
     var cultureInfo = CultureInfo.GetCultureInfo(WorkContext.CurrentCulture);
 
     RegisterLink(new LinkEntry { Type = "image/x-icon", Rel = "shortcut icon", Href = Url.Content(theme.Location + "/" + theme.Path + "/Content/" + "favicon.ico") });
-    RegisterLink(new LinkEntry { Rel = "apple-touch-icon", Href = Url.Content(theme.Location + "/" + theme.Path + "/Content/" + "apple-touch-icon.png") });
 
     SetMeta(new MetaEntry { Name = "viewport", Content = "width=device-width, initial-scale=1.0" });
     SetMeta(new MetaEntry { Name = "msapplication-TileColor", Content = "#ffffff" });

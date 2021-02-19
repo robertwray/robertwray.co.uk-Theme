@@ -13,7 +13,7 @@
 }
 
 <!DOCTYPE html>
-<html lang="@WorkContext.CurrentCulture" class="static @Html.ClassForPage() @(settings.UseFluidLayout ? "fluid-layout" : "boxed-layout") @(settings.UseFixedNav ? "fixed-nav" : "floating-nav") @(settings.UseStickyFooter ? "sticky-footer" : string.Empty) @(cultureInfo.TextInfo.IsRightToLeft ? "rtl" : string.Empty)">
+<html lang="@WorkContext.CurrentCulture" class="static @Html.ClassForPage() @(settings.UseFluidLayout ? "container-fluid" : "container") @(settings.UseFixedNav ? "fixed-nav" : "floating-nav") @(settings.UseStickyFooter ? "sticky-footer" : string.Empty) @(cultureInfo.TextInfo.IsRightToLeft ? "rtl" : string.Empty)">
 
 <head>
     <meta charset="utf-8" />
