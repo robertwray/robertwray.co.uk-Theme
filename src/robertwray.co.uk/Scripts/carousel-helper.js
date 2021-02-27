@@ -41,7 +41,7 @@ function generateMarkupForIndicatorsAndSlides(carouselId, carouselEntries) {
         const titleStyle = entry.inverse ? ' style="color: white;"' : '';
         indicators.push('<li data-target="#' + carouselId + '" data-slide-to="' + counter + '" ' + indicatorCssClass + '></li>');
         slides.push('<div ' + slideItemCssClass + '>');
-        slides.push('<img alt="' + entry.title + '" src="' + entry.imageSrc + '" />');
+        slides.push('<img alt="' + entry.title + '" src="' + entry.imageSrc + '" class="img-fluid" />');
         slides.push('<div class="carousel-caption d-none d-md-block">');
         slides.push('<h3><a style="color: black; font-weight: 900;" href="' + entry.postSrc + '">' + entry.title + '</a></h3>');
         slides.push('<p' + titleStyle + '>' + entry.description + '</p>');

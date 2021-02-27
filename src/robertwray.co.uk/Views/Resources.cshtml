@@ -14,11 +14,15 @@
     SetMeta(new MetaEntry { Name = "msapplication-TileColor", Content = "#ffffff" });
     SetMeta(new MetaEntry { Name = "msapplication-TileImage", Content = Url.Content(theme.Location + "/" + theme.Path + "/Content/" + "ms-icon-144x144.png") });
 
-    Style.Include("site-" + settings.Swatch + ".min.css");
-    if (cultureInfo.TextInfo.IsRightToLeft)
-    {
-        Style.Include("site-rtl.min.css");
-    }
+    //Style.Include("site-" + settings.Swatch + ".min.css");
+    //if (cultureInfo.TextInfo.IsRightToLeft)
+    //{
+    //    Style.Include("site-rtl.min.css");
+    //}
+
+    Style.Include("pjs.custom.css");
+    Style.Include("footer.css");
+
 
     // 2017-07-22 RW - Added customisation
     Style.Include("robertwray.co.uk.customisations.css");

@@ -13,7 +13,7 @@
 }
 
 <!DOCTYPE html>
-<html lang="@WorkContext.CurrentCulture" class="static @Html.ClassForPage() @(settings.UseFluidLayout ? "container-fluid" : "container") @(settings.UseFixedNav ? "fixed-nav" : "floating-nav") @(settings.UseStickyFooter ? "sticky-footer" : string.Empty) @(cultureInfo.TextInfo.IsRightToLeft ? "rtl" : string.Empty)">
+<html lang="@WorkContext.CurrentCulture" class="static @Html.ClassForPage()">
 
 <head>
     <meta charset="utf-8" />
@@ -43,8 +43,18 @@
     <link rel="icon" type="image/png" sizes="96x96" href="@Url.Content(WorkContext.CurrentTheme.Location + "/" + WorkContext.CurrentTheme.Path + "/Content/" + "favicon-96x96.png")">
     <link rel="icon" type="image/png" sizes="16x16" href="@Url.Content(WorkContext.CurrentTheme.Location + "/" + WorkContext.CurrentTheme.Path + "/Content/" + "favicon-16x16.png")">
     <link rel="manifest" href="@Url.Content(WorkContext.CurrentTheme.Location + "/" + WorkContext.CurrentTheme.Path + "/Content/" + "/manifest.json")">
+
+
+    <link href="https://bootswatch.com/4/spacelab/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    @*<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>*@
+    @*<link rel="stylesheet" href="index_files/pjs.custom.css">
+    <link rel="stylesheet" href="index_files/footer.css">*@
+
     <script type="text/javascript">
-        (function (d) { d.className = "dyn" + d.className.substring(6, d.className.length); })(document.documentElement);
+        // (function (d) { d.className = "dyn" + d.className.substring(6, d.className.length); })(document.documentElement);
     </script>
 </head>
 

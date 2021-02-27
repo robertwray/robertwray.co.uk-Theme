@@ -60,66 +60,55 @@
 }
 @if (Model.Navigation != null)
 {
-    @*<nav class="navbar navbar-expand-lg navbar-light bg-light">*@
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary bs4header">
         <div class="container">
+            @*<a class="navbar-brand" href="#">robertwray.co.uk</a>*@
             @Display.Branding()
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                @Zone(Model.Navigation)
-                @*<ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>*@
-                @if (settings.UseNavSearch)
-                {
-                    @Display.NavSearch()
-                }
-                @*<form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>*@
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                @*@Zone(Model.Navigation)*@
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">about me</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    @*@if (settings.UseNavSearch)
+                    {
+                        @Display.NavSearch()
+                    }*@
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">sign in...</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-    <div class="navbar-wrapper">
-        <div class="navbar yamm @(settings.UseInverseNav ? "navbar-inverse" : "navbar-default") @(settings.UseFixedNav ? "navbar-fixed-top" : string.Empty)">
-            <div id="layout-navigation" class="group">
-                <div class="navbar-header">
-                    @Display.Branding()
-                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#main-menu">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse" id="main-menu">
-                    @Zone(Model.Navigation)
-
-                </div>
-            </div>
-        </div>
-    </div>
 }
 @if (Model.Featured != null)
 {
@@ -133,7 +122,7 @@
         @Zone(Model.BeforeMain)
     </div>
 }
-<div id="layout-main-container">
+<div id="layout-main-container" class="container">
     <div id="layout-main" class="group">
         @if (Model.AsideFirst != null)
         {
@@ -184,7 +173,7 @@
 }
 @if (Model.TripelFirst != null || Model.TripelSecond != null || Model.TripelThird != null)
 {
-    <div id="layout-tripel-container">
+    <div id="layout-tripel-container" class="container">
         <div id="layout-tripel" class="group">
             @* as in beer *@
             @if (Model.TripelFirst != null)
@@ -245,8 +234,9 @@
                 }
             </footer>
         </div>*@
-<div id="layout-footer" class="group">
-    <footer class="bg-dark" id="footer">
+@*<div id="layout-footer" class="group">*@
+    <footer class="bg-primary" id="footer">
+        <!-- https://www.markuptag.com/bootstrap-4-footer-example-code/ -->
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
@@ -254,33 +244,35 @@
                     <p>We provide you the best solutions and creative ideas with HTML, CSS, Bootstrap, Javascript, Jquery technologies, and SEO.</p>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <h3>Quick Links</h3>
+                    <!-- <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#">Link First</a></li>
                         <li><a href="#">Link Second</a></li>
                         <li><a href="#">Link Third</a></li>
                         <li><a href="#">Link Fourth</a></li>
                         <li><a href="#">Link Fifth</a></li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <h3>Our Services</h3>
+                    <!-- <h3>Our Services</h3>
                     <ul>
                         <li><a href="#">Link First</a></li>
                         <li><a href="#">Link Second</a></li>
                         <li><a href="#">Link Third</a></li>
                         <li><a href="#">Link Fourth</a></li>
                         <li><a href="#">Link Fifth</a></li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <h3>Download App</h3>
+                    <h3>Social Stuff</h3>
                     <div class="follow-us">
                         <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <!-- <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li> -->
+                            <li><a href="https://twitter.com/robertwrayuk"><i class="fab fa-twitter"></i> Twitter</a></li>
                             <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
                             <li><a href="#"><i class="fab fa-linkedin-in"></i> Linkedin</a></li>
+                            <li><a href="#"><i class="fab fa-github"></i> Github</a></li>
+                            <li><a href="#"><i class="fab fa-stack-overflow"></i> Stackoverflow</a></li>
                         </ul>
                     </div>
                 </div>
@@ -292,14 +284,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <p class="text-center">markuptag Copyright 2020. All Rights Reserved</p>
+                        <p class="text-center">&copy; Robert Wray, 2000-2021</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    </div>
-    }
-    <div id="toTop">
-        <h1><i class="fa fa-chevron-up"></i></h1>
-    </div>
+@*</div>*@
+}
+<div id="toTop">
+    <h1><i class="fa fa-chevron-up"></i></h1>
+</div>
