@@ -205,7 +205,7 @@ html.floating-nav.fluid-layout .navbar-wrapper {
     width: 25%;
   }
 }
-/*
+
 .tripel-1 #tripel-first,
 .tripel-2 #tripel-first,
 .tripel-3 #tripel-first,
@@ -220,6 +220,7 @@ html.floating-nav.fluid-layout .navbar-wrapper {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 @media (min-width: 992px) {
   .tripel-1 #tripel-first,
   .tripel-2 #tripel-first,
@@ -234,6 +235,7 @@ html.floating-nav.fluid-layout .navbar-wrapper {
     width: 100%;
   }
 }
+
 .tripel-12 #tripel-first,
 .tripel-13 #tripel-first,
 .tripel-23 #tripel-first,
@@ -262,6 +264,7 @@ html.floating-nav.fluid-layout .navbar-wrapper {
     width: 50%;
   }
 }
+/*
 .tripel-123 #tripel-first,
 .tripel-123 #tripel-second,
 .tripel-123 #tripel-third {
@@ -795,3 +798,319 @@ ol, ul {
     max-width: 100%;
     height: auto;
 }
+
+#layout-main{
+    margin-top: 10px;
+}
+
+
+
+
+
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em
+}
+
+a.label:hover, a.label:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.label:empty {
+    display: none
+}
+
+.btn .label {
+    position: relative;
+    top: -1px
+}
+
+.label-default {
+    background-color: #474949
+}
+
+    .label-default[href]:hover, .label-default[href]:focus {
+        background-color: #2e2f2f
+    }
+
+.label-primary {
+    background-color: #446e9b
+}
+
+    .label-primary[href]:hover, .label-primary[href]:focus {
+        background-color: #345578
+    }
+
+.label-success {
+    background-color: #3cb521
+}
+
+    .label-success[href]:hover, .label-success[href]:focus {
+        background-color: #2e8a19
+    }
+
+.label-info {
+    background-color: #3399f3
+}
+
+    .label-info[href]:hover, .label-info[href]:focus {
+        background-color: #0e80e5
+    }
+
+.label-warning {
+    background-color: #d47500
+}
+
+    .label-warning[href]:hover, .label-warning[href]:focus {
+        background-color: #a15900
+    }
+
+.label-danger {
+    background-color: #cd0200
+}
+
+    .label-danger[href]:hover, .label-danger[href]:focus {
+        background-color: #9a0200
+    }
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #3399f3;
+    border-radius: 10px
+}
+
+    .badge:empty {
+        display: none
+    }
+
+.btn .badge {
+    position: relative;
+    top: -1px
+}
+
+.btn-xs .badge, .btn-group-xs > .btn .badge {
+    top: 0;
+    padding: 1px 5px
+}
+
+a.badge:hover, a.badge:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.list-group-item.active > .badge, .nav-pills > .active > a > .badge {
+    color: #3399f3;
+    background-color: #fff
+}
+
+.list-group-item > .badge {
+    float: right
+}
+
+    .list-group-item > .badge + .badge {
+        margin-right: 5px
+    }
+
+.nav-pills > li > a > .badge {
+    margin-left: 3px
+}
+
+
+
+
+
+
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px
+}
+
+    pre code {
+        padding: 0;
+        font-size: inherit;
+        color: inherit;
+        white-space: pre-wrap;
+        background-color: transparent;
+        border-radius: 0
+    }
+
+.pre-scrollable {
+    max-height: 340px;
+    overflow-y: scroll
+}
+
+
+
+
+
+.dropdown-toggle:focus {
+    outline: 0
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-clip: padding-box
+}
+
+    .dropdown-menu.pull-right {
+        right: 0;
+        left: auto
+    }
+
+    .dropdown-menu .divider {
+        height: 1px;
+        margin: 9px 0;
+        overflow: hidden;
+        background-color: #e5e5e5
+    }
+
+    .dropdown-menu > li > a {
+        display: block;
+        padding: 3px 20px;
+        clear: both;
+        font-weight: normal;
+        line-height: 1.42857143;
+        color: #333;
+        white-space: nowrap
+    }
+
+        .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+            text-decoration: none;
+            color: #fff;
+            background-color: #446e9b
+        }
+
+    .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+        color: #fff;
+        text-decoration: none;
+        outline: 0;
+        background-color: #446e9b
+    }
+
+    .dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
+        color: #999
+    }
+
+        .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
+            text-decoration: none;
+            background-color: transparent;
+            background-image: none;
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            cursor: not-allowed
+        }
+
+.open > .dropdown-menu {
+    display: block
+}
+
+.open > a {
+    outline: 0
+}
+
+.dropdown-menu-right {
+    left: auto;
+    right: 0
+}
+
+.dropdown-menu-left {
+    left: 0;
+    right: auto
+}
+
+.dropdown-header {
+    display: block;
+    padding: 3px 20px;
+    font-size: 12px;
+    line-height: 1.42857143;
+    color: #999;
+    white-space: nowrap
+}
+
+.dropdown-backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 990
+}
+
+.pull-right > .dropdown-menu {
+    right: 0;
+    left: auto
+}
+
+.dropup .caret, .navbar-fixed-bottom .dropdown .caret {
+    border-top: 0;
+    border-bottom: 4px dashed;
+    border-bottom: 4px solid \9;
+    content: ""
+}
+
+.dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 2px
+}
+
+
+
+
+
+
+/*.menuUserName > a:before {
+    content: "";
+    font-family: "FontAwesome";
+    margin-right: 5px
+}*/
+
+
+
+
+
