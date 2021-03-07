@@ -4,28 +4,54 @@
     IEnumerable<object> blogPosts = Model.ContentItems.ContentItems;
 }
 
-@if (blogPosts == null || blogPosts.Count() < 1) {
+@if (blogPosts == null || blogPosts.Count() < 1) 
+{
     <p>@T("No posts.")</p>
 }
 else {
     <ul class="recent-posts">
-        @foreach (dynamic post in blogPosts) {
-            string title = post.Title;
-            ContentItem contentItem = post.ContentItem;
-            DateTime date = post.ContentItem.CommonPart.CreatedUtc;
+        @foreach (dynamic post in blogPosts) 
+        {
+            var contentItem = post.ContentItem;
+            DateTime date = contentItem.CommonPart.CreatedUtc;
+            string imageUrl = string.Empty;
 
-            var summaryText = post.ContentItem.BlogPost.Fields.Count > 0 ? post.ContentItem.BlogPost.Fields[0].Value : string.Empty;
+            var postTitle = contentItem.ContentManager.GetItemMetadata(contentItem).DisplayText;
 
+            var summaryText = contentItem.BlogPost.Fields.Count > 0 ? contentItem.BlogPost.Fields[0].Value : string.Empty;
+
+            if (contentItem.SummaryCardsMetaTagsPart != null)
+            {
+                imageUrl = contentItem.SummaryCardsMetaTagsPart.CardImage;
+            }
             <li>
-                <h5>
-                    @Html.ItemDisplayLink(title, contentItem)<br />
-                    @if (!string.IsNullOrWhiteSpace(summaryText))
-                    {
-                        @summaryText
-                        <br />
-                    }
-                    <small>@T("Posted") @date.ToShortDateString()</small>
-                </h5>
+                <div class="card border-light mb-3">
+                    <div class="card-header">@postTitle</div>
+                @*Exclude images that are just my bio image*@
+                @if (!string.IsNullOrWhiteSpace(imageUrl) && ! imageUrl.EndsWith("bio_banner_image.png", StringComparison.OrdinalIgnoreCase))
+                {
+                    <img class="card-img-top" src="@imageUrl" alt="@postTitle">
+                }
+                    <div class="card-body">
+                        @if (!string.IsNullOrWhiteSpace(summaryText))
+                        {
+                            <p class="card-text">
+                            @summaryText
+                            </p>
+                        }
+                        @Html.ItemDisplayLink("Read more...", (ContentItem)contentItem)
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                        @foreach (var tag in contentItem.TagsPart.CurrentTags)
+                        {
+                            //TODO: Make links clickable?
+                            <a class="tag label label-default" href="#">@tag</a>
+                        }
+                        </div>
+                        <small class="text-muted">@date.ToShortDateString()</small>
+                    </div>
+                </div>
             </li>
         }
     </ul>

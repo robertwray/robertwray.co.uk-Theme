@@ -3,6 +3,11 @@
 
 @{
     var blogPost = Model.ContentItem;
+    var imageUrl = string.Empty;
+    if (Model.ContentItem.SummaryCardsMetaTagsPart != null)
+    {
+        imageUrl = Model.ContentItem.SummaryCardsMetaTagsPart.CardImage;
+    }
 }
 
 <h3><a href="@Url.ItemDisplayUrl((IContent)blogPost)">@blogPost.TitlePart.Title</a></h3>
@@ -13,7 +18,12 @@
     }
     @Display(Model.CommentsCount)
 </div>
-
+@if (!string.IsNullOrWhiteSpace(imageUrl) && ! imageUrl.EndsWith("bio_banner_image.png", StringComparison.OrdinalIgnoreCase))
+{
+    <div>
+        <img src="@imageUrl" class="img-fluid">
+    </div>
+}
 
 @Display(Model.Summary)
 
