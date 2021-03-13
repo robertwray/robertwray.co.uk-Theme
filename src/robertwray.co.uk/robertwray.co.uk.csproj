@@ -53,6 +53,27 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
+    <Reference Include="Orchard.Blogs">
+      <HintPath>..\..\bin\Orchard.Blogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Orchard.Comments">
+      <HintPath>..\..\bin\Orchard.Comments.dll</HintPath>
+    </Reference>
+    <Reference Include="Orchard.MediaLibrary">
+      <HintPath>..\..\bin\Orchard.MediaLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Orchard.Search">
+      <HintPath>..\..\bin\Orchard.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Orchard.Tags">
+      <HintPath>..\..\bin\Orchard.Tags.dll</HintPath>
+    </Reference>
+    <Reference Include="Orchard.Taxonomies">
+      <HintPath>..\..\bin\Orchard.Taxonomies.dll</HintPath>
+    </Reference>
+    <Reference Include="Orchard.Users">
+      <HintPath>..\..\bin\Orchard.Users.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.ComponentModel.DataAnnotations">
