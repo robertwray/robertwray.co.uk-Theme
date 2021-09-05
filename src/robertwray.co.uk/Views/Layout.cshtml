@@ -287,11 +287,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <p class="text-center">&copy; Robert Wray, 2000-2021</p>
+                        <p class="text-center">&copy; Robert Wray, 2000-2021 (v2021.09.05.1)</p>
                     </div>
                 </div>
             </div>
         </div>
+        @if (Model.Footer != null) {
+            <div id="footer-sig" class="group" style="display: none;">
+                @Zone(Model.Footer)
+            </div>
+        }
     </footer>
 @*</div>*@
 }
