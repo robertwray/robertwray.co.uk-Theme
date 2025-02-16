@@ -1327,3 +1327,13 @@ footer {
     background-color: rgba(0, 0, 0, 0.2);
     margin-top: 40px;
 }
+
+
+
+.pagination  li {
+    padding-right: 5px;
+}
+
+.dropdown-menu {
+    background-color: #38648d !important;
+}
